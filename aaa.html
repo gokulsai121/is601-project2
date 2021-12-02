@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>AAA Testing</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <header>
+      <img class="logo" src="images/logo1.jpeg">
+      <nav>
+        <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="nav_links">
+          <li><a href="pro.html">Home</a></li>
+          <li><a href="breif.html">Brief</a></li>
+          <li><a href="python.html">Python</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </div>
+      </nav>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    </header>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>AAA testing with Python</h1>
+            <h3>WHAT IS A AAA TESTING?</h3>
+            <p>Arrange/Act/Assert (AAA) is a pattern for arranging and formatting code in Unit Test methods.</p>
+
+            <p>It is a best practice to author your tests in more natural and convenient way. The idea is to develop a unit test by following these 3 simple steps:</p>
+             <p>Arrange – setup the testing objects and prepare the prerequisites for your test.</p>
+            <p>Act – perform the actual work of the test.</p>
+            <p>Assert – verify the result.</p>
+            </br>
+            <h3>BENEFITS OF USING ARRANGE ACT ASSERT</h3>
+            <p>1. Distinguishes what's being tested from the setup and verification procedures.</p>
+            <p>2. Clarifies and concentrates attention on a set of test steps that has proven to be successful in the past and are generally required. </p>
+            <p>3. There were assertions jumbled in with the "Act" code. </p>
+            <p>4. Methods of testing that attempt to test too many things at once.  </p>
+            </br></br>
+            <p>Each step in the pattern is a function whose return value is the input of the following step. For example,</p>
+            <p>assert(act(arrange()));</p>
+            <p>Each step is represented by a function that is called from left to right. The first command is to arrange. The arrange function returns a value, which is then provided to the act function, which returns a value, which is then sent to assert. Assert returns void, a bool, or any value you, the author, deem useful for the test.</p>
+
+            <h3>ARRANGE</h3>
+            <img style='float:left;width:250px;height:150px; margin-right:10px;' src="images/aaa.jpg" width="20%" height="20%">
+            <p> A unit test application's initial step is to create a test case. We'll set up the test here, or in other words, we'll conduct the essential setup. For example, in order to run the test, we must first construct an object of the desired class, then build dummy objects and other variable initialization, and so on.</p>
+            <p> Example: fruit = ['apples','bananas','Calabash','Dragonfruit']</p>
+            </br></br>
+
+            <h3>ACT</h3>
+            <img style='float:left;width:250px;height:150px; margin-right:10px;' src="images/aaa1.webp"/>
+            <p> The middle step of a unit step application is this. We will run the test in this stage. To put it another way, we'll do the real unit testing and get the results from the test application. Basically, we'll use the object we built in the previous step to call the targeted function in this step.</p>
+            <p> Example: result = fruit.reverse()</p>    
+            </br></br>
+
+            <h3>ASSERT</h3>
+            <img style='float:left;width:250px;height:150px; margin-right:10px;' src="images/aaa2.jpg"/>
+            <p> A unit test application's final step is to run it. We'll compare the returned result to the expected outcomes in this phase.</p>
+            <p> Example: assert result is None</p>
+            <p> assert fruit == ['apples','bananas','Calabash','Dragonfruit']</p>    
+            </br></br>
+            <h3>OUTPUT:</h3>
+            <p> def test_reverse():</p>
+            <p>    """ </p>
+            <p><p>list.reverse inverts the order of items in a list, in place</p>
+            <p>   """</p>
+            <p>    fruit = ['apples','bananas','Calabash','Dragonfruit']</p>
+            
+            <p>    result = fruit.reverse()</p>
+            
+            <p>    assert result is None</p>
+            <p>    assert fruit == ['apples','bananas','Calabash','Dragonfruit']</p>    
+            </br></br>
+
+        </div>
+    </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginRight = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginRight = "0";
+    document.body.style.backgroundColor = "white";
+  }
+</script>
+</body>
+</html>
