@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>AAA Testing</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <header>
+      <img class="logo" src="images/logo1.jpeg">
+      <nav>
+        <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="nav_links">
+          <li><a href="pro.html">Home</a></li>
+          <li><a href="breif.html">Brief</a></li>
+          <li><a href="python.html">Python</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </div>
+      </nav>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    </header>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1></h1>
+            <h3>Creational Design Pattern:</h3>
+            <p>As the name implies, creational design patterns are concerned with the creation of classes or objects. </p>
+
+            <p>They abstract away the intricacies of classes so that we are less reliant on their exact implementation, or so that we don't have to deal with intricate construction every time we use them, or so that we can guarantee some special instantiation properties. </p>
+             <p>They're great for reducing dependencies between our classes while also allowing us to regulate how the user interacts with them.</p>
+            <p>The design patterns covered in this article are:
+                * Factory
+                * Abstract Factory
+                * Builder
+                * Prototype
+                * Singleton
+                * Object Pool</p>
+            </br>
+            <h3>Factory Pattern:</h3>
+            <p>The Factory pattern is a design pattern that allows you to create an object using a function or method (known as the factory method). 
+              In Factory pattern, we create object without exposing the creation logic to the client and refer to newly created object using a common interface.
+            </p>
+            </br></br>
+            <h3>Abstract  Pattern:</h3>
+            <p>A factory of factories is another name for the Abstract Factory design. 
+
+                The Factory pattern, as previously shown, uses a factory function to create instances of a class. You provide a mechanism for everyone to create their own factory with the Abstract Factory pattern.</p>
+            </br></br>
+
+            <h3>Builder Pattern:</h3>
+            <p> The Builder pattern's key advantages are that it clearly separates the construction and representation of an entity, allowing for more control over the construction process.</p>
+            </br></br>
+
+            <h3>Prototype Pattern:</h3>
+            <p> When creating an item is expensive and takes a lot of effort and resources, and you already have a similar object, the Prototype pattern is employed. This pattern enables us to clone the original item to a new object and then modify it to meet our requirements.</p>    
+            </br></br>
+
+            <h3>Singleton:</h3>
+            <p> A Singleton allows only one object to be instantiated from a class at a time. 
+
+                This can be handy in situations where you want to offer a global configuration object.</p>    
+            </br></br>
+
+        </div>
+    </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginRight = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginRight = "0";
+    document.body.style.backgroundColor = "white";
+  }
+</script>
+</body>
+</html>
